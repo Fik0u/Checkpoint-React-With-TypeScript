@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+// Imports 
 import './App.css';
+import Counter from './components/Counter';
+import Greeting from './components/Greeting';
 
-function App() {
+// Notre composant principal qui est un composant fonctionnel
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+{/* L'appel de nos composants pour qu'ils s'affichent sur notre page */}
+
+        <h1>React Apps With TypeScript</h1>
+        <Greeting name = {'Adam'} />
+        <Counter count = {0} />
+        
     </div>
   );
 }
